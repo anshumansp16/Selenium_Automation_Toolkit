@@ -30,22 +30,17 @@ search.clear()
 print("Sending keys to search box")
 search.send_keys("Anshuman Parmar" + Keys.ENTER)
 
-
 print("Waiting for link to be found")
 WebDriverWait(driver, 50).until(
     EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "Anshuman Parmar - Entrepreneur"))
 )
 
-
 elements = driver.find_elements(By.TAG_NAME, 'h3')
-
 
 print("Printing elements")
 for e in elements:
     print(e.text)
     time.sleep(5)
-
-
 
 print("Finding link")
 link = driver.find_element(By.PARTIAL_LINK_TEXT, "Anshuman Parmar - Entrepreneur")
@@ -53,12 +48,8 @@ link = driver.find_element(By.PARTIAL_LINK_TEXT, "Anshuman Parmar - Entrepreneur
 print("Clicking link")
 link.click()
 
-driver.switch_to.new_window('tab')
-
 print("Waiting for 10 seconds")
 time.sleep(10)
-
-
 
 print("Quitting driver")
 driver.quit()

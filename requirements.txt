@@ -1,0 +1,10 @@
+# Selenium Automation Toolkit - Dependencies
+
+# Core Selenium
+selenium>=4.27.0
+
+# Automatic WebDriver Management (No manual ChromeDriver needed!)
+webdriver-manager>=4.0.0
+
+# Optional: For better logging and debugging
+colorlog>=6.8.0
